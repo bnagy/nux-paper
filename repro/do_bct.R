@@ -1,14 +1,11 @@
-do_bct <- function(
-    df,
-    fgcol='#f6f5f5',
-    bgcol='#1e1a1d',
-    lim=150,
-    highlight_nodes = c(),
-    number_nodes = c(),
-    legend_pos =c (0.85, 0.94),
-    flip=FALSE
-    ) {
-
+do_bct <- function(df,
+                   fgcol = "#f6f5f5",
+                   bgcol = "#1e1a1d",
+                   lim = 150,
+                   highlight_nodes = c(),
+                   number_nodes = c(),
+                   legend_pos = c(0.85, 0.94),
+                   flip = FALSE) {
     library(dplyr)
     library(ggraph)
     library(tidygraph)
@@ -16,16 +13,10 @@ do_bct <- function(
     library(ggsci)
     library(stringr)
     library(paletteer)
-    font_add_google("Tinos", "fnt")
-    # font_add_google("IM Fell DW Pica", "fnt")
 
+    font_add_google("Tinos", "fnt")
     showtext_auto()
 
-    pal <- c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", "#FF7F00", "grey50", "#A65628")
-    # bgcol <- '#1e1a1d'
-    # fgcol <- '#f6f5f5'
-    # bgcol = '#f4f0e8'
-    # fgcol = '#040300'
     # Seed for the layout
     set.seed(42)
     gr1 <- as_tbl_graph(df)
@@ -77,8 +68,11 @@ do_bct <- function(
         ) +
         geom_node_text(
             size = 2,
-            family="fnt",
-            aes(filter=work %in% number_nodes,label=str_extract(name,'\\d+')),
+            family = "fnt",
+            aes(
+                filter = work %in% number_nodes,
+                label = str_extract(name, "\\d+")
+            ),
         ) +
 
         scale_fill_paletteer_d("ggsci::category20_d3") +
@@ -86,11 +80,16 @@ do_bct <- function(
         scale_edge_color_manual(values = pal_d3("category20")(20)) +
         scale_edge_width(range = c(0.2, 4)) +
         scale_edge_alpha(range = c(0.3, 1)) +
-        guides(color = guide_legend(ncol = 3, byrow = TRUE, override.aes = aes(size = 4.5))) +
+        guides(
+            color = guide_legend(
+                ncol = 3,
+                byrow = TRUE,
+                override.aes = aes(size = 4.5)
+            )
+        ) +
 
         theme_minimal() +
         theme(
-            # plot.title = element_text(margin = margin(b = 50)),
             panel.border = element_blank(),
             panel.background = element_rect(fill = bgcol, color = bgcol),
             plot.background = element_rect(fill = bgcol, color = bgcol),
@@ -109,6 +108,8 @@ do_bct <- function(
             panel.grid.minor = element_blank(),
             panel.grid.major = element_blank()
         )
-    if(flip) return(p + coord_flip())
+    if (flip) {
+        return(p + coord_flip())
+    }
     return(p)
 }
