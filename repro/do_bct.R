@@ -14,12 +14,12 @@ do_bct <- function(df,
     library(stringr)
     library(paletteer)
 
-    font_add_google("Tinos", "fnt")
-    showtext_auto()
+    showtext::font_add_google("Tinos", "fnt")
+    showtext::showtext_auto()
 
     # Seed for the layout
     set.seed(42)
-    gr1 <- as_tbl_graph(df)
+    gr1 <- tidygraph::as_tbl_graph(df)
     # Plot
     p <- gr1 %>%
         # Add a node attribute called 'work' which is the poem name with
@@ -109,7 +109,7 @@ do_bct <- function(df,
             panel.grid.major = element_blank()
         )
     if (flip) {
-        return(p + coord_flip())
+        return(p + ggplot2::coord_flip())
     }
     return(p)
 }
