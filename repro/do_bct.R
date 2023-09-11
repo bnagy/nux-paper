@@ -14,7 +14,7 @@ do_bct <- function(df,
     library(stringr)
     library(paletteer)
 
-    showtext::font_add_google("Tinos", "fnt")
+    sysfonts::font_add_google("Tinos", "fnt")
     showtext::showtext_auto()
 
     # Seed for the layout
