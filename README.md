@@ -27,7 +27,7 @@ The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Mo
 
 TBD (a full paper is under preparation)
 
-Authors: Rebecca Menmuir (QCL), Ben Nagy (IJP PAN)
+Authors: Rebecca Menmuir (QMUL), Ben Nagy (IJP PAN)
 
 ## Technical
 
