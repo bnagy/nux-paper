@@ -1,5 +1,7 @@
 # nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
 
+# Anxiety, Authorship and Walnuts: A Stylometric Reassessment of the (Pseudo?) Ovidian _Nux_
+
 Technical reproduction materials for our presentation at 'Influence 50 Years On' https://influenceoxford.wordpress.com/, Magdalen College Oxford, September 25, 2023.
 
 The code in this notebook should precisely replicate every figure and result from the conference paper and presentation.
