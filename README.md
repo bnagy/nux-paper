@@ -29,6 +29,16 @@ TBD (a full paper is under preparation)
 
 Authors: Rebecca Menmuir (QCL), Ben Nagy (IJP PAN)
 
+## Technical
+
+To run the repro code locally, you will need to pip install the packages from:
+
+https://github.com/bnagy/ruzicka
+
+https://github.com/bnagy/mqdq-parser
+
+(they should install their own deps)
+
 ## LICENSE
 
 CC-BY 4.0 (see LICENSE.txt)
