@@ -1,4 +1,5 @@
-# nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
+# nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![DOI](https://zenodo.org/badge/672875887.svg)](https://zenodo.org/badge/latestdoi/672875887)
+
 
 # Anxiety, Authorship and Walnuts: A Stylometric Reassessment of the (Pseudo?) Ovidian _Nux_
 
