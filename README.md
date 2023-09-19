@@ -1,4 +1,7 @@
-# nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
+# nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![DOI](https://zenodo.org/badge/672875887.svg)](https://zenodo.org/badge/latestdoi/672875887)
+
+
+# Anxiety, Authorship and Walnuts: A Stylometric Reassessment of the (Pseudo?) Ovidian _Nux_
 
 Technical reproduction materials for our presentation at 'Influence 50 Years On' https://influenceoxford.wordpress.com/, Magdalen College Oxford, September 25, 2023.
 
@@ -25,7 +28,17 @@ The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Mo
 
 TBD (a full paper is under preparation)
 
-Authors: Rebecca Menmuir (QCL), Ben Nagy (IJP PAN)
+Authors: Rebecca Menmuir (QMUL), Ben Nagy (IJP PAN)
+
+## Technical
+
+To run the repro code locally, you will need to pip install the packages from:
+
+https://github.com/bnagy/ruzicka
+
+https://github.com/bnagy/mqdq-parser
+
+(they should install their own deps)
 
 ## LICENSE
 
