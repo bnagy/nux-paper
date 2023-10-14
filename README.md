@@ -13,6 +13,10 @@ The _Nux_ (or _De nuce_, ‘On the Walnut Tree’), has been described as ‘the
 
 Using stylometric analysis, this paper reassesses the authorship and dating of the _Nux_. Stylometric analysis strongly suggests Ovidian authorship (from Ovid’s exilic period), or an imitator with an astoundingly innate sense for Ovidian composition. Or, perhaps, a mixture of the two, given the condition of the earliest surviving witnesses (from c. 1100), which contain medieval interpolations as well as potentially ancient poetry. ‘Genuine’, in the case of the _Nux_, cannot be considered a binary condition, and the poem therefore has much to tell us about how to approach literature of contested authenticity.
 
+## WEBSITE
+
+You can look at the website.
+
 ## TLDR
 
 The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Moreover, it is consistent with late Ovidian metrics more so than early, which is consistent with its presumed exilic composition. The _Medicamina_, another poem that has been questioned, is correctly identified as more consistent with earlier style. For comparison, we included the _Consolatio ad Liviam_ in our analysis, which is now accepted to be (Late Antique?) imitatio, but was accepted during the medieval period. The methods are able to distinguish between good imitatio and Ovid. This does not rule out the (faint) possibility that the _Nux_ is simply better imitatio, but such proofs are unobtainable.
