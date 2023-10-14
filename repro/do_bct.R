@@ -1,6 +1,8 @@
 do_bct <- function(df,
                    fgcol = "#f6f5f5",
                    bgcol = "#1e1a1d",
+                   fontname="IM Pica Fell",
+                   fontsize=12,
                    lim = 150,
                    highlight_nodes = c(),
                    number_nodes = c(),
@@ -14,7 +16,7 @@ do_bct <- function(df,
     library(stringr)
     library(paletteer)
 
-    sysfonts::font_add_google("Tinos", "fnt")
+    sysfonts::font_add_google(fontname, "fnt")
     showtext::showtext_auto()
 
     # Seed for the layout
@@ -95,7 +97,7 @@ do_bct <- function(df,
             plot.background = element_rect(fill = bgcol, color = bgcol),
             legend.title = element_blank(),
             legend.position = legend_pos,
-            legend.text = element_text(size = 10, color = fgcol),
+            legend.text = element_text(size = fontsize, color = fgcol),
             legend.spacing.x = unit(2, "mm"),
             legend.spacing.y = unit(-1.5, "mm"),
             axis.title.x = element_blank(),

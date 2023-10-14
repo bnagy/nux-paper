@@ -1,0 +1,12 @@
+---
+title: "Summary"
+header_menu_title: "Summary"
+navigation_menu_title: "Summary"
+weight: 5
+header_menu: false
+---
+
+The *Nux* is highly Ovidian, particuarly in its poetic (metrical, etc) style. Moreover, it is consistent with late Ovidian metrics more so than early, which is consistent with its presumed exilic composition. The *Medicamina*, another poem that has been questioned, is correctly identified as more consistent with earlier style. For comparison, we included the *Consolatio ad Liviam* in our analysis, which is now accepted to be (Late Antique?) imitatio, but was accepted during the medieval period. The *Consolatio* is correctly identified as being non-Ovidian---in other words the methods are able to distinguish between good imitatio and Ovid. This does not rule out the (faint) possibility that the Nux is simply better imitatio, but such proofs are unobtainable.
+
+So what does it all mean? Based on the example of the *Consolatio*, we should assume that an imitator could ‘fool’ the methods used here in terms of lexico-grammatical analysis, even though the *Consolatio* is a visibly worse match than the *Nux*. In terms of fooling the poetic analysis, it seems much less likely. The poetic features demonstrably ‘see’ very fine differences between the Augustan elegists, even making visible their changes in style over time. We can see that a minor variation in even one aspect—slightly too few caesurae here, a couple of elisions too many there—are obvious and telling differences to the statistical techniques. In other words, the combination of techniques is generally accurate in terms of correctly assigning authorship, and powerful in terms of detecting small, yet significant, stylistic differences, where they exist. The fact that non-Ovidian authorship of the *Nux* is insupportable with this combination of methods should be taken as significant new evidence in terms of its genuineness. As always, statistical analysis is an exercise in probabilities. We cannot exclude the possibility of a poetic savant, completely attuned to Ovidian technique, who is capable of precisely complying with every metrical practice over the course of 91 couplets, while simultaneously deploying Ovidian diction, and also imparting whatever it is that causes readers to sense the ‘wit’ or ‘personality’ we find in his undisputed corpus. In statistical terms, however, any living horse in any race would be a better bet.
+
