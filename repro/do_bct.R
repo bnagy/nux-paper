@@ -1,8 +1,9 @@
 do_bct <- function(df,
                    fgcol = "#f6f5f5",
                    bgcol = "#1e1a1d",
-                   fontname="IM Pica Fell",
-                   fontsize=12,
+                   palette = c("#58A8E0FF", "#3080C0FF", "#484880FF", "#E0B050FF", "#780000FF", "#F8E060FF", "#C82818FF", "#80C8F8FF", "#024f19", "#F85820FF", "#E04020FF", "#F8A858FF", "#4eac6a", "#987008FF"),
+                   fontname = "Roboto Condensed",
+                   fontsize = 13,
                    lim = 150,
                    highlight_nodes = c(),
                    number_nodes = c(),
@@ -77,9 +78,9 @@ do_bct <- function(df,
             ),
         ) +
 
-        scale_fill_paletteer_d("ggsci::category20_d3") +
-        scale_colour_paletteer_d("ggsci::category20_d3") +
-        scale_edge_color_manual(values = pal_d3("category20")(20)) +
+        scale_fill_manual(values = palette) +
+        scale_colour_manual(values = palette) +
+        scale_edge_color_manual(values = palette) +
         scale_edge_width(range = c(0.2, 4)) +
         scale_edge_alpha(range = c(0.3, 1)) +
         guides(
@@ -96,7 +97,8 @@ do_bct <- function(df,
             panel.background = element_rect(fill = bgcol, color = bgcol),
             plot.background = element_rect(fill = bgcol, color = bgcol),
             legend.title = element_blank(),
-            legend.position = legend_pos,
+            legend.position = "inside",
+            legend.position.inside = legend_pos,
             legend.text = element_text(size = fontsize, color = fgcol),
             legend.spacing.x = unit(2, "mm"),
             legend.spacing.y = unit(-1.5, "mm"),
