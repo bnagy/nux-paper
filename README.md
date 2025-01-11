@@ -23,7 +23,7 @@ The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Mo
 
 ## Citation
 
-TBD (a full paper is under preparation)
+TBD (the full paper is in press)
 
 Authors: Rebecca Menmuir (QMUL), Ben Nagy (IJP PAN)
 

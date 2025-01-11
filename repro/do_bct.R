@@ -1,14 +1,34 @@
-do_bct <- function(df,
-                   fgcol = "#f6f5f5",
-                   bgcol = "#1e1a1d",
-                   palette = c("#58A8E0FF", "#3080C0FF", "#484880FF", "#E0B050FF", "#780000FF", "#F8E060FF", "#C82818FF", "#80C8F8FF", "#024f19", "#F85820FF", "#E04020FF", "#F8A858FF", "#4eac6a", "#987008FF"),
-                   fontname = "Roboto Condensed",
-                   fontsize = 13,
-                   lim = 150,
-                   highlight_nodes = c(),
-                   number_nodes = c(),
-                   legend_pos = c(0.85, 0.94),
-                   flip = FALSE) {
+default_palette <- c(
+    "#58A8E0FF",
+    "#3080C0FF",
+    "#484880FF",
+    "#E0B050FF",
+    "#780000FF",
+    "#F8E060FF",
+    "#C82818FF",
+    "#80C8F8FF",
+    "#024f19",
+    "#F85820FF",
+    "#E04020FF",
+    "#F8A858FF",
+    "#4eac6a",
+    "#987008FF"
+)
+do_bct <- function(
+    df,
+    fgcol = "#f6f5f5",
+    bgcol = "#1e1a1d",
+    palette = default_palette,
+    fontname = "Roboto Condensed",
+    fontsize = 13,
+    lim = 150,
+    highlight_nodes = c(),
+    number_nodes = c(),
+    legend_pos = c(
+        0.85,
+        0.94
+    ),
+    flip = FALSE) {
     library(dplyr)
     library(ggraph)
     library(tidygraph)
@@ -17,7 +37,10 @@ do_bct <- function(df,
     library(stringr)
     library(paletteer)
 
-    sysfonts::font_add_google(fontname, "fnt")
+    sysfonts::font_add_google(
+        fontname,
+        "fnt"
+    )
     showtext::showtext_auto()
 
     # Seed for the layout
