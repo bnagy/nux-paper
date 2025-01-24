@@ -15,11 +15,11 @@ Using stylometric analysis, this paper reassesses the authorship and dating of t
 The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Moreover, it is consistent with late Ovidian metrics more so than early, which is consistent with its presumed exilic composition. The _Medicamina_, another poem that has been questioned, is correctly identified as more consistent with earlier style. For comparison, we included the _Consolatio ad Liviam_ in our analysis, which is now accepted to be (Late Antique?) imitatio, but was accepted during the medieval period. The methods are able to distinguish between good imitatio and Ovid. This does not rule out the (faint) possibility that the _Nux_ is simply better imitatio, but such proofs are unobtainable.
 
 ### Cluster Analysis (poetic features)
-<img src="figures/bct_poet.pdf" alt="Cluster Analysis" style="width: 800px;"/>
+<img src="figures/fig2.png" alt="Cluster Analysis" style="width: 800px;"/>
 
 ### Bootstrap Distance Imposters (poetic features)
 
-<img src="figures/bdi_poet.pdf" alt="Cluster Analysis" style="width: 800px;"/>
+<img src="figures/fig5.png" alt="Cluster Analysis" style="width: 800px;"/>
 
 ## Citation
 
