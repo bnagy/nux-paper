@@ -2,7 +2,7 @@
 
 # A Stylometric Reassessment of the (Pseudo?) Ovidian _Nux_
 
-Technical reproduction materials for our paper.
+Technical reproduction materials for the paper.
 
 ## ABSTRACT
 
@@ -25,15 +25,11 @@ The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Mo
 
 TBD (the full paper is in press)
 
-Authors: Rebecca Menmuir (QMUL), Ben Nagy (IJP PAN)
-
 ## Technical
 
 To run the repro code locally, you will need to pip install the packages from:
 
-https://github.com/bnagy/ruzicka
-
-https://github.com/bnagy/mqdq-parser
+(anonymized)
 
 (they should install their own deps)
 
