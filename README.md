@@ -1,4 +1,4 @@
-# nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)[![DOI](https://zenodo.org/badge/672875887.svg)](https://doi.org/10.5281/zenodo.8355505)
+# nux-paper [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![DOI](https://zenodo.org/badge/672875887.svg)](https://doi.org/10.5281/zenodo.8355505) [![Paper DOI](https://img.shields.io/badge/Paper%20DOI-10.1353%2Fhel.2025.a984782-blue)](https://doi.org/10.1353/hel.2025.a984782)
 
 # A Stylometric Reassessment of the (Pseudo?) Ovidian _Nux_
 
@@ -36,8 +36,6 @@ The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Mo
 }
 ```
 
-Authors: Rebecca Menmuir (QMUL), Ben Nagy (IJP PAN)
-
 ## Reproducing the figures
 
 The environment is pinned. The Python versions are the ones recorded in the
@@ -45,8 +43,11 @@ notebooks' `%watermark` cells from the paper run (20 January 2025) and are
 enforced by `pyproject.toml`; the R versions are printed by the `%%R`
 session-info cell at the end of each notebook.
 
-**Python.** 3.12 is required: pandas 2.2.2 and numpy 1.26.4 predate the 3.13
-wheels.
+**Python.** Install with 3.12: the pins in `pyproject.toml` are the versions from
+the paper run, and pandas 2.2.2 and numpy 1.26.4 predate the 3.13 wheels. The
+pins are not a scientific requirement — the notebooks reproduce on 3.14 with
+current library versions too — but pinning keeps the outputs bit-for-bit
+comparable with the published figures.
 
 ```bash
 python3.12 -m venv .venv
