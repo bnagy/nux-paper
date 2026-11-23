@@ -31,6 +31,7 @@ do_bct <- function(
     flip = FALSE) {
     library(dplyr)
     library(ggraph)
+    library(ggtext)
     library(tidygraph)
     library(showtext)
     library(ggsci)
@@ -46,6 +47,20 @@ do_bct <- function(
     # Seed for the layout
     set.seed(42)
     gr1 <- tidygraph::as_tbl_graph(df)
+
+    # Work names as they appear in the legend, in the order ggplot2 uses for
+    # the keys of a discrete scale (ie sorted).
+    legend_works <- gr1 %>%
+        activate(nodes) %>%
+        pull(name) %>%
+        str_replace_all("\\s[0-9]+", "") %>%
+        unique() %>%
+        sort()
+
+    # Keys for the emphasised works get the same triangle as the nodes, so the
+    # legend matches what is drawn in the plot.
+    legend_shapes <- ifelse(legend_works %in% highlight_nodes, 17, 19)
+
     # Plot
     p <- gr1 %>%
         # Add a node attribute called 'work' which is the poem name with
@@ -110,10 +125,9 @@ do_bct <- function(
             color = guide_legend(
                 ncol = 3,
                 byrow = TRUE,
-                override.aes = aes(size = 4.5)
+                override.aes = list(size = 4.5, shape = legend_shapes)
             )
         ) +
-
         theme_minimal() +
         theme(
             panel.border = element_blank(),
@@ -122,7 +136,6 @@ do_bct <- function(
             legend.title = element_blank(),
             legend.position = "inside",
             legend.position.inside = legend_pos,
-            legend.text = element_text(size = fontsize, color = fgcol),
             legend.spacing.x = unit(2, "mm"),
             legend.spacing.y = unit(-1.5, "mm"),
             axis.title.x = element_blank(),
@@ -132,6 +145,7 @@ do_bct <- function(
             axis.text.y = element_blank(),
             axis.ticks.y = element_blank(),
             text = element_text(family = "fnt"),
+            legend.text = element_markdown(size = fontsize, color = fgcol),
             panel.grid.minor = element_blank(),
             panel.grid.major = element_blank()
         )
