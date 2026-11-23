@@ -1,0 +1,45 @@
+# Metadata-only project: there is no Python package here, just the pinned
+# environment needed to reproduce the paper's figures and numbers.
+#
+#   python3.12 -m venv .venv && source .venv/bin/activate
+#   pip install "nux-paper[lab] @ git+https://github.com/bnagy/nux-paper@<tag>"
+#   cd repro && Rscript setup-r.R
+#
+# Versions below are the ones recorded in the notebooks' watermark output
+# (paper run: 2025-01-20, Python 3.12.3).
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nux-paper"
+version = "1.0.0"
+description = "Reproduction materials for 'A Stylometric Reassessment of the (Pseudo?) Ovidian Nux'"
+readme = "README.md"
+requires-python = "==3.12.*"
+license = { text = "CC-BY-4.0" }
+dependencies = [
+    # core analysis (versions from the paper run)
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "scipy==1.13.0",
+    "scikit-learn==1.4.2",
+    "ruzicka @ git+https://github.com/bnagy/ruzicka@bfd33af0cdece337872eefbb06461b05c3791ea9",
+    "MQDQParser @ git+https://github.com/bnagy/mqdq-parser@9e74e65739160f753c520b86126cb40821f34dfe",
+    # dependencies of mqdq-parser, pinned so the resolver cannot drift
+    "beautifulsoup4==4.12.3",
+    "dominate==2.9.1",
+    "seaborn==0.13.2",
+    # notebook execution (%%R cells need rpy2 and an R installation)
+    "ipykernel==6.29.5",
+    "ipython==8.20.0",
+    "rpy2==3.5.17",
+    "watermark==2.5.0",
+]
+
+[project.optional-dependencies]
+lab = ["jupyterlab==4.3.4"]
+
+[tool.setuptools]
+packages = []

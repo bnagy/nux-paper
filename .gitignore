@@ -40,3 +40,8 @@
 *.fls
 .ipynb_checkpoints
 *-checkpoint.ipynb
+
+# python build/packaging artifacts
+*.egg-info/
+.venv/
+__pycache__/
