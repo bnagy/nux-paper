@@ -15,27 +15,70 @@ Using stylometric analysis, this paper reassesses the authorship and dating of t
 The _Nux_ is highly Ovidian, particuarly in its poetic (metrical, etc) style. Moreover, it is consistent with late Ovidian metrics more so than early, which is consistent with its presumed exilic composition. The _Medicamina_, another poem that has been questioned, is correctly identified as more consistent with earlier style. For comparison, we included the _Consolatio ad Liviam_ in our analysis, which is now accepted to be (Late Antique?) imitatio, but was accepted during the medieval period. The methods are able to distinguish between good imitatio and Ovid. This does not rule out the (faint) possibility that the _Nux_ is simply better imitatio, but such proofs are unobtainable.
 
 ### Cluster Analysis (poetic features)
-<img src="figures/fig2.png" alt="Cluster Analysis" style="width: 800px;"/>
+<img src="figures/fig2-lowres.jpg" alt="Cluster Analysis" style="width: 800px;"/>
 
 ### Bootstrap Distance Imposters (poetic features)
 
-<img src="figures/fig5.png" alt="Cluster Analysis" style="width: 800px;"/>
+<img src="figures/fig5-lowres.jpg" alt="Bootstrap Distance Imposters" style="width: 800px;"/>
 
 ## Citation
 
-TBD (the full paper is in press)
+```bibtex
+@article{menmuir2025nux,
+  author  = {Menmuir, Rebecca and Nagy, Benjamin},
+  title   = {A Stylometric Reassessment of the (Pseudo?) Ovidian \textit{Nux}},
+  journal = {Helios},
+  volume  = {52},
+  number  = {1},
+  pages   = {47--83},
+  year    = {2025},
+  doi     = {10.1353/hel.2025.a984782}
+}
+```
 
 Authors: Rebecca Menmuir (QMUL), Ben Nagy (IJP PAN)
 
-## Technical
+## Reproducing the figures
 
-To run the repro code locally, you will need to pip install the packages from:
+The environment is pinned. The Python versions are the ones recorded in the
+notebooks' `%watermark` cells from the paper run (20 January 2025) and are
+enforced by `pyproject.toml`; the R versions are printed by the `%%R`
+session-info cell at the end of each notebook.
 
-https://github.com/bnagy/ruzicka
+**Python.** 3.12 is required: pandas 2.2.2 and numpy 1.26.4 predate the 3.13
+wheels.
 
-https://github.com/bnagy/mqdq-parser
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install "nux-paper[lab] @ git+https://github.com/bnagy/nux-paper@paper-figures"
+```
 
-(they should install their own deps)
+**R.** The notebooks use `rpy2`, so an R installation (4.5.3 in the paper run)
+must be on `PATH`, with these packages:
+
+    ggplot2, ggraph, ggtext, tidygraph, igraph, showtext, ggsci, stringr,
+    paletteer, dplyr, ggridges
+
+`rpy2` compiles against whichever R it finds, so install it with that R
+available.
+
+**Running.** Start Jupyter from `repro/` and run the notebooks in this order:
+
+| notebook | writes |
+|---|---|
+| `build_corpus.ipynb` | `elegy_corpus.csv`, `elegy_poetic.csv` |
+| `bct_ngram.ipynb` | `figures/bct_ngram.pdf` |
+| `bct_poet.ipynb` | `figures/bct_poet.pdf` |
+| `nux_bdi_ngram.ipynb` | `figures/bdi_ngram.pdf`, `figures/bdi_ngram_bubble.pdf` |
+| `nux_bdi_poet.ipynb` | `figures/bdi_poet.pdf` |
+
+The derived vectors are committed, so `build_corpus.ipynb` is only needed to
+rebuild them from `corpus/`.
+
+The `ggsave` calls are commented out so that running a notebook does not
+overwrite the figures; uncomment to regenerate. `figures/fig1.pdf`–`fig5.pdf`
+are the figures of the published paper and are archival.
 
 ## LICENSE
 
